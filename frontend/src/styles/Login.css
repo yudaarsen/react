@@ -1,0 +1,9 @@
+.login_el {
+    height: 30px;
+    margin-top: 5px;
+}
+
+.cred {
+    display: flex;
+    flex-direction: column;
+}

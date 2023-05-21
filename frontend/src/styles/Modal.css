@@ -1,0 +1,23 @@
+.modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    min-width: 200px;
+    min-height: 30px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
