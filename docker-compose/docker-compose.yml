@@ -1,0 +1,34 @@
+services:
+  frontend:
+    ports:
+      - "80:80"
+    build:
+      dockerfile: DockerFile
+      context: ../frontend
+    networks:
+      - appeal_net
+    hostname: frontend
+
+  backend:
+    ports:
+      - "8080:8080"
+    build:
+      dockerfile: DockerFile
+      context: ../backend
+    networks:
+      - appeal_net
+    hostname: backend
+
+  database:
+    ports:
+      - "5432:5432"
+    build:
+      dockerfile: DockerFile
+      context: ../backend/database
+    networks:
+      - appeal_net
+    hostname: database 
+
+networks:
+  appeal_net:
+    driver: bridge

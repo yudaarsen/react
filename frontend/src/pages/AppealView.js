@@ -24,7 +24,8 @@ export default function AppealView() {
             if(response.ok) {
                 return response.json();
             } else {
-                renewToken(navigate, '/workspace/' + id);
+		if(response.status != 400)
+                  renewToken(navigate, '/workspace/' + id);
             }
         }).then((data) => {
             if(data != null)
